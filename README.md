@@ -1,4 +1,6 @@
 cs157AOnlineBanking
 ===================
 
-Online Banking using Databases 
+Online Banking using Databases!
+
+Requirements:
