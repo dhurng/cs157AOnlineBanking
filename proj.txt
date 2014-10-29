@@ -1,6 +1,6 @@
 Posting Date:
-Team Name: Team F8L
-Project Title:
+Team Name: Team F8LException
+Project Title: Online Banking System
 Database Title:
 
 Database Schema
