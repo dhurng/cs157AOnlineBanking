@@ -90,3 +90,19 @@ function resetPassword ($username) {
 	$result = queryMysql("UPDATE Users SET password='$token'");
 	return $token;
 }
+
+//Check Checking Account Balance
+function check_CheckingBalance ($checkingsAccount) {
+	include 'db_connect.php';
+	$result=mysql_query("SELECT * FROM checkingsAccount ORDER BY account_type", $link) or die ("Database Error");
+}
+
+//Check Savings Account Balance
+function check_SavingBalance ($savingsAccount) {
+	include 'db_connect.php';
+	$result=mysql_query("SELECT * FROM savingsAccount ORDER BY account_type", $link) or die ("Database Error");
+}
+
+//Withdraw from Accounts
+function withdraw ($
+//Deposit into Account
