@@ -1,7 +1,7 @@
-Posting Date:
+Posting Date: October 29
 Team Name: Team F8LException
 Project Title: Online Banking System
-Database Title:
+Link to Github: https://github.com/dhurng/cs157AOnlineBanking/edit/master/proj.txt
 
 Database Schema
 1. Users {id, username, password, checkingAmount, savingsAmount}
