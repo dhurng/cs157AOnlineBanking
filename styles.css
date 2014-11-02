@@ -1,0 +1,14 @@
+* {
+  font-family:verdana,sans-serif;
+  font-size  :14pt;
+}
+
+body{
+    width: 700px;
+    margin: 20px auto;
+    color: white;
+}
+
+html{
+    background-color: aqua;
+}
