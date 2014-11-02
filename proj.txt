@@ -52,3 +52,41 @@ Functional Requirements
 13. Administrator can reset non-Admin password.
 14. Administrator can view customers who have a zero balance in their checking and/or savings account.
 15. Administrator can view who is a late paying their credit card bill.
+
+Requirements Functionalities
+//Send Query to Database
+function queryMysql($query){
+	global $conection;
+	$result = $conection->query($query);
+	if (!$result) die ($conection->error);
+	return $result;
+}
+
+// Customer Registration
+function registration ($username, $password, $checkAmount, $savingsAmount){
+	$result = queryMysql("INSERT INTO Users(username, password, checkingAmount, savingsAmount) 
+	                      VALUES ('$username', '$password', '$checkAmount', '$savingsAmount'");	
+}
+
+// Customer Account Cancellation
+function cancelAccount ($username){
+	$result = queryMysql("DELETE FROM Users WHERE username = '$username'");
+}
+
+// Customer Log In
+function userLogIn ($username, $password){
+	$result = queryMysql("SELECT * FROM Users WHERE username='$username' and password='$password'");
+}
+
+// Customer Change Password
+function checkPassword($username, $oldPass, $newPass){
+	$result = queryMysql("UPDATE Users SET password = '$newPass' WHERE old.password='$oldPass'");
+}
+
+// Reset Customer Password
+function resetPassword ($username) {
+	$salt1 = "qm&h";
+	$token = hash('f8luser', "$salt1'somePassword'");
+	$result = queryMysql("UPDATE Users SET password='$token'");
+	return $token;
+}
