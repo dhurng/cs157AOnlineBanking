@@ -106,6 +106,7 @@ function resetPassword ($username, $userId) {
 	return $token;
 }
 
+<<<<<<< HEAD
 // 7. Check Checking Account Balance
 function get_CheckingBalance ($username, $accountId) {
 	include 'db_connect.php';
@@ -179,3 +180,20 @@ function adminGetUsersOfOverdueLoans() {
 	$result=mysql_query("SELECT userId FROM User 
 	WHERE userId IN (SELECT userId FROM Loan 
 	WHERE paymentDueDate<paymentDate", $link) or die ("Database Error"); 
+=======
+//Check Checking Account Balance
+function check_CheckingBalance ($checkingsAccount) {
+	include 'db_connect.php';
+	$result=mysql_query("SELECT * FROM checkingsAccount ORDER BY account_type", $link) or die ("Database Error");
+}
+
+//Check Savings Account Balance
+function check_SavingBalance ($savingsAccount) {
+	include 'db_connect.php';
+	$result=mysql_query("SELECT * FROM savingsAccount ORDER BY account_type", $link) or die ("Database Error");
+}
+
+//Withdraw from Accounts
+function withdraw ($
+//Deposit into Account
+>>>>>>> origin/master
