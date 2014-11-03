@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 echo <<<_END
     <!DOCTYPE html>
     <html>
@@ -18,10 +20,10 @@ if (isset($_SESSION['user'])){
 }
 
 echo <<<_END
-        <title>F8L Online Banking</title>
-        <link rel='stylesheet' type='text/css' href='style.css'>
+        <title>F8L Online Banking $userstr</title>
+        <link rel='stylesheet' type='text/css' href='styles.css'>
     </head>
     <body>
-            
+          <div><h1>$appname$userstr</h1></div>  
 _END;
 ?>
