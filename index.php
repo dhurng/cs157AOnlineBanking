@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>F8L Exception Bank</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
-
+<?php
+    require_once 'header.php';
+echo <<<_END
 <body>
   <script type="text/javascript">
   //site is still in works
@@ -73,15 +63,6 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="js/bootstrap.min.js"></script>
 </body>
-
-<?php
-    require_once 'header.php';
-    
-	echo "HELLO WORLD!";
-    
-    
-?>
-
 </html>
 _END;
-
+?>

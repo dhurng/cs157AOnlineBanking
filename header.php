@@ -20,8 +20,12 @@ if (isset($_SESSION['user'])){
 }
 
 echo <<<_END
-        <title>F8L Online Banking $userstr</title>
-        <link rel='stylesheet' type='text/css' href='styles.css'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>F8L Exception Bank $userstr</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
           <div><h1>$appname$userstr</h1></div>  
